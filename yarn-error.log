@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\MECHREVO\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js
+  C:\Program Files\nodejs\node.exe C:\Users\MECHREVO\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add fs
 
 PATH: 
   C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\TortoiseGit\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\MECHREVO\AppData\Local\Yarn\bin;C:\Ruby30-x64\bin;C:\Users\MECHREVO\AppData\Local\Microsoft\WindowsApps;;C:\Users\MECHREVO\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\MECHREVO\AppData\Roaming\npm
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: EPERM: operation not permitted, unlink 'C:\Users\MECHREVO\Desktop\pengzheng\vue3-demo01\zhihu\node_modules\esbuild\esbuild.exe'
+  Error: EPERM: operation not permitted, unlink 'C:\Users\MECHREVO\Desktop\pengzheng\vue3\vue3-ts-book\node_modules\esbuild\esbuild.exe'
 
 npm manifest: 
   {
@@ -26,8 +26,9 @@ npm manifest:
       "serve": "vite preview"
     },
     "dependencies": {
-      "vue": "^3.0.5"
-  
+      "vue": "^3.2.4",
+      "vue-router": "^4.0.4",
+      "vuex": "^4.0.0-rc.1"
     },
     "devDependencies": {
       "@vitejs/plugin-vue": "^1.1.5",
@@ -170,6 +171,11 @@ Lockfile:
     version "3.7.2"
     resolved "https://registry.npm.taobao.org/bluebird/download/bluebird-3.7.2.tgz#9f229c15be272454ffa973ace0dbee79a1b0c36f"
     integrity sha1-nyKcFb4nJFT/qXOs4NvueaGww28=
+  
+  bootstrap@^5.0.0-beta2:
+    version "5.0.0-beta2"
+    resolved "https://registry.npm.taobao.org/bootstrap/download/bootstrap-5.0.0-beta2.tgz?cache=0&sync_timestamp=1612974643080&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fbootstrap%2Fdownload%2Fbootstrap-5.0.0-beta2.tgz#ab1504a12807fa58e5e41408e35fcea42461e84b"
+    integrity sha1-qxUEoSgH+ljl5BQI41/OpCRh6Es=
   
   braces@~3.0.2:
     version "3.0.2"
@@ -554,10 +560,10 @@ Lockfile:
       "@vue/runtime-dom" "3.0.7"
       "@vue/shared" "3.0.7"
   
-  vuex@^3.6.2:
-    version "3.6.2"
-    resolved "https://registry.npm.taobao.org/vuex/download/vuex-3.6.2.tgz#236bc086a870c3ae79946f107f16de59d5895e71"
-    integrity sha1-I2vAhqhww655lG8QfxbeWdWJXnE=
+  vuex@^4.0.0-rc.1:
+    version "4.0.0-rc.1"
+    resolved "https://registry.npm.taobao.org/vuex/download/vuex-4.0.0-rc.1.tgz#160cd5957972a61c7c01ab585995b78e092a298d"
+    integrity sha1-FgzVlXlyphx8AatYWZW3jgkqKY0=
   
   yallist@^3.0.2:
     version "3.1.1"

@@ -7,7 +7,9 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "bootstrap": "^5.0.0-beta2",
+    "element-plus": "^1.1.0-beta.5",
+    "fs": "^0.0.1-security",
+    "svg-sprite-loader": "^6.0.9",
     "vue": "^3.2.4",
     "vue-router": "^4.0.4",
     "vuex": "^4.0.0-rc.1"

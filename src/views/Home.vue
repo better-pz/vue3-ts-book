@@ -1,14 +1,18 @@
 <template>
-  <div>
-   
-    <ColumnList :list="testData" />
+  <div class="content">
+    <Header />
+    <!-- <ColumnList :list="testData" /> -->
+    <main>
+      <div class="main-left"></div>
+      <div class="main-right"></div>
+    </main>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, reactive, toRefs } from "vue";
-
 import ColumnList from "../components/ColumnList.vue";
+import Header from "../components/Header.vue";
 export interface ColumnProps {
   id: number;
   title: string;
@@ -19,9 +23,10 @@ export default defineComponent({
   name: "Home",
   components: {
     ColumnList,
+    Header,
   },
   setup() {
-    const data: ColumnProps[] = reactive({
+    const data = reactive<{ testData: ColumnProps[] }>({
       testData: [
         {
           id: 1,
@@ -48,3 +53,30 @@ export default defineComponent({
   },
 });
 </script>
+<style lang="scss" scoped>
+.content {
+  main {
+    margin-top: 0.5rem !important;
+    width: 1100px;
+    margin: 0 auto;
+     
+      display: flex;
+    .main-left {
+     background-color: #fff;
+      padding: 0.3rem;
+      border-radius: 0.3rem;
+      border: 1px solid #eee;
+      margin-bottom: 16px;
+      width: 75%;
+    }
+    .main-right {
+      background-color: #fff;
+      padding: 0.3rem;
+      border-radius: 0.3rem;
+      border: 1px solid #eee;
+      margin-bottom: 16px;
+      width: 22%;
+    }
+  }
+}
+</style>
