@@ -59,10 +59,9 @@ export default defineComponent({
     margin-top: 0.5rem !important;
     width: 1100px;
     margin: 0 auto;
-     
-      display: flex;
+    display: flex;
     .main-left {
-     background-color: #fff;
+      background-color: #fff;
       padding: 0.3rem;
       border-radius: 0.3rem;
       border: 1px solid #eee;
