@@ -1,11 +1,16 @@
 <template>
   <div class="content">
     <Header />
-    <!-- <ColumnList :list="testData" /> -->
+    <!--  -->
     <main>
-      <div class="main-left"></div>
-      <div class="main-right"></div>
+      <div class="main-left animated bounceInLeft">
+        <ColumnList :list="testData" />
+      </div>
+      <div class="main-right animated bounceInRight">
+        <Author />
+      </div>
     </main>
+    <Footer />
   </div>
 </template>
 
@@ -13,10 +18,12 @@
 import { defineComponent, reactive, toRefs } from "vue";
 import ColumnList from "../components/ColumnList.vue";
 import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue";
+import Author from "../components/Author.vue";
+
 export interface ColumnProps {
   id: number;
   title: string;
-  avatar: string;
   description: string;
 }
 export default defineComponent({
@@ -24,6 +31,8 @@ export default defineComponent({
   components: {
     ColumnList,
     Header,
+    Footer,
+    Author,
   },
   setup() {
     const data = reactive<{ testData: ColumnProps[] }>({
@@ -32,17 +41,25 @@ export default defineComponent({
           id: 1,
           title: "test1的专栏",
           description:
-            "这是的test1专栏，有一段非常有意思的简介，可以更新一下欧",
-          avatar:
-            "http://vue-maker.oss-cn-hangzhou.aliyuncs.com/vue-marker/5ee22dd58b3c4520912b9470.jpg?x-oss-process=image/resize,m_pad,h_100,w_100",
+            "巴拉巴拉巴拉卡巴拉那看那看看那可能卡年卡哪款那款男生科技大赛科技地科技司ID加上就嗲杰斯顿静安寺大祭司2加速度计的骄傲是大家收集2ID阿金斯大家啊司机",
         },
         {
           id: 2,
           title: "test2的专栏",
           description:
-            "这是的test2专栏，有一段非常有意思的简介，可以更新一下欧",
-          avatar:
-            "http://vue-maker.oss-cn-hangzhou.aliyuncs.com/vue-marker/5ee22dd58b3c4520912b9470.jpg?x-oss-process=image/resize,m_pad,h_100,w_100",
+            "巴拉巴拉巴拉卡巴拉那看那看看那可能卡年卡哪款那款男生科技大赛科技地科技司ID加上就嗲杰斯顿静安寺大祭司2加速度计的骄傲是大家收集2ID阿金斯大家啊司机",
+        },
+        {
+          id: 3,
+          title: "test3的专栏",
+          description:
+            "这是的test3专栏，有一段非常有意思的简介，可以更新一下欧,巴拉巴拉巴拉卡巴拉那看那看看那可能卡年卡哪款那款男生科技大赛科技地科技司ID加上就嗲杰斯顿静安寺大祭司2加速度计的骄傲是大家收集2ID阿金斯大家啊司机",
+        },
+        {
+          id: 4,
+          title: "test4的专栏",
+          description:
+            "巴拉巴拉巴拉卡巴拉那看那看看那可能卡年卡哪款那款男生科技大赛科技地科技司ID加上就嗲杰斯顿静安寺大祭司2加速度计的骄傲是大家收集2ID阿金斯大家啊司机",
         },
       ],
     });
@@ -61,18 +78,14 @@ export default defineComponent({
     margin: 0 auto;
     display: flex;
     .main-left {
-      background-color: #fff;
       padding: 0.3rem;
       border-radius: 0.3rem;
-      border: 1px solid #eee;
       margin-bottom: 16px;
       width: 75%;
     }
     .main-right {
-      background-color: #fff;
       padding: 0.3rem;
       border-radius: 0.3rem;
-      border: 1px solid #eee;
       margin-bottom: 16px;
       width: 22%;
     }

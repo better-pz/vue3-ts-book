@@ -33,8 +33,8 @@ const navList = ref<List[]>([
 
 <style lang="scss" scoped>
 header {
-  background: #fff;
-  border-bottom: 1px solid #eee;
+  background-color: rgba(35,35,36,.8);
+  border-bottom: 1px solid rgba(35,35,36,.8);
   z-index: 10;
   .header-min {
   width: 860px;
@@ -63,7 +63,7 @@ header {
     }
     .header-slogan {
       font-size: 0.6rem;
-      color: #999;
+      color: #f4f4f5;
       display: inline-block;
       padding-left: 0.3rem;
     }
@@ -78,7 +78,7 @@ header {
        span {
          cursor: pointer;
          margin-left: 3px;
-         color: #999;
+         color: #f4f4f5;
          font-size: .9rem;
        }
        

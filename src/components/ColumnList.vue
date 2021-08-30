@@ -1,24 +1,16 @@
 <template>
   <div class="row">
-    <div v-for="column in columnList" :key="column._id" class="col-4 mb-4">
-      <div class="card h-100 shadow-sm">
-        <div class="card-body text-center">
-          <img
-            :src="column.avatar && column.avatar.fitUrl"
-            :alt="column.title"
-            class="rounded-circle border border-light my-3"
-          />
-          <h5 class="card-title">{{ column.title }}</h5>
-          <p class="card-text text-left">{{ column.description }}</p>
-          <router-link :to="`/column/${column._id}`" class="btn btn-outline-primary">进入专栏</router-link>
-        </div>
+    <div v-for="column in columnList" :key="column._id">
+      <div class="common-card_bgc row_card">
+        <a class="card_title">{{ column.title }}</a>
+        <session class="card_text common-text_line_3">{{ column.description }}</session>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType, computed } from 'vue'
+import { defineComponent, PropType, computed } from "vue";
 
 export interface ColumnProps {
   id: number;
@@ -27,36 +19,57 @@ export interface ColumnProps {
   description: string;
 }
 export default defineComponent({
-  name: 'ColumnList',
+  name: "ColumnList",
   props: {
     list: {
       type: Array as PropType<ColumnProps[]>,
-      required: true
-    }
+      required: true,
+    },
   },
   setup(props) {
     const columnList = computed(() => {
-      return props.list.map(column => {
+      return props.list.map((column) => {
         if (!column.avatar) {
-          
-          // column.avatar = require('@/assets/column.jpg')
         }
-        return column
-      })
-    })
+        return column;
+      });
+    });
     return {
-      columnList
-    }
-  }
-})
+      columnList,
+    };
+  },
+});
 </script>
 
-<style scoped>
+<style scoped lang="scss" >
 .row {
-    display: flex;
-    width: 1000px;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
+  max-width: 1000px;
+  margin: 0 auto;
+  .row_card {
+    background-color: #232324;
+    min-height: 220px;
+    border-radius: 6px;
+    margin: 20px 0;
+    padding: 10px;
+    overflow: hidden;
+    user-select: none;
+    transition: all 0.2s;
+    .card_title {
+      display: block;
+      width: 100%;
+      height: 70px;
+      font-size: 28px;
+      line-height: 80px;
+      text-align: center;
+    }
+    .card_text {
+      height: 80px;
+      text-indent: 2em;
+      color: #dfdfdf;
+      font-size: 18px;
+      padding: 0 20px;
+      
+    }
+  }
 }
 </style>

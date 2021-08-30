@@ -1,21 +1,11 @@
 <template>
-  <div>
-
-  </div>
+   <footer >
+        <div>系统由 Vue3+TypeScript+Ant Desgin驱动 </div>
+        <div>作者:Better 柏特</div>
+    </footer>
 </template>
-
-<script lang="ts">
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-  setup () {
-    
-
-    return {}
+<style lang="scss" scoped>
+  footer {
+    text-align: center;
   }
-})
-</script>
-
-<style scoped>
-
 </style>
