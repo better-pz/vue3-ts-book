@@ -4,6 +4,15 @@
       <div class="common-card_bgc row_card">
         <a class="card_title">{{ column.title }}</a>
         <session class="card_text common-text_line_3">{{ column.description }}</session>
+        <footer class="flex justify-between align-center">
+          <div>
+            <Tag>2021-10-2</Tag>
+          </div>
+          <div class="footer-right">
+            <Tag>JavaScript</Tag>
+            <Tag>vue</Tag>
+          </div>
+        </footer>
       </div>
     </div>
   </div>
@@ -11,7 +20,7 @@
 
 <script lang="ts">
 import { defineComponent, PropType, computed } from "vue";
-
+import Tag from "./base/Tag.vue";
 export interface ColumnProps {
   id: number;
   title: string;
@@ -26,6 +35,7 @@ export default defineComponent({
       required: true,
     },
   },
+  components: { Tag },
   setup(props) {
     const columnList = computed(() => {
       return props.list.map((column) => {
@@ -43,9 +53,9 @@ export default defineComponent({
 
 <style scoped lang="scss" >
 .row {
-  max-width: 1000px;
   margin: 0 auto;
   .row_card {
+    cursor: pointer;
     background-color: #232324;
     min-height: 220px;
     border-radius: 6px;
@@ -54,6 +64,9 @@ export default defineComponent({
     overflow: hidden;
     user-select: none;
     transition: all 0.2s;
+    &:hover {
+      transform: scale(1.02);
+    }
     .card_title {
       display: block;
       width: 100%;
@@ -68,7 +81,16 @@ export default defineComponent({
       color: #dfdfdf;
       font-size: 18px;
       padding: 0 20px;
-      
+    }
+    footer {
+      height: 60px;
+      .footer-right {
+        span {
+          margin-right: 20px;
+        }
+          
+        
+      }
     }
   }
 }

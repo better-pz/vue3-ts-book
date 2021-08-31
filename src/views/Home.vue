@@ -81,13 +81,13 @@ export default defineComponent({
       padding: 0.3rem;
       border-radius: 0.3rem;
       margin-bottom: 16px;
-      width: 75%;
+      width: 72%;
     }
     .main-right {
       padding: 0.3rem;
       border-radius: 0.3rem;
       margin-bottom: 16px;
-      width: 22%;
+      width: 28%;
     }
   }
 }
