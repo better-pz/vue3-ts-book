@@ -1,7 +1,7 @@
 // import { createRouter, createWebHistory } from 'vue-router'
 import Home from './views/Home.vue'
 import todoList from './views/todoList.vue';
-
+import articleDetail from './views/articleDetail.vue'
 // const routerHistory = createWebHistory()
 // const router = createRouter({
 //   history: routerHistory,
@@ -29,6 +29,11 @@ const routes = [
     path: "/list",
     name: "list",
     component: todoList,
+  },
+  {
+    path: "/article/:id",
+    name: "article",
+    component: articleDetail,
   }
 ];
 

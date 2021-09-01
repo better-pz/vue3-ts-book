@@ -1,16 +1,16 @@
 <template>
   <div class="row">
-    <div v-for="column in columnList" :key="column._id">
-      <div class="common-card_bgc row_card">
-        <a class="card_title">{{ column.title }}</a>
+    <div v-for="column in columnList" :key="column.id">
+      <div class="common-card_bgc row_card" >
+        <router-link :to="`/article/${column.id}`"   class="card_title">{{ column.title }}</router-link>
         <session class="card_text common-text_line_3">{{ column.description }}</session>
         <footer class="flex justify-between align-center">
           <div>
-            <Tag>2021-10-2</Tag>
+            <Tag type="success">2021-10-2</Tag>
           </div>
           <div class="footer-right">
-            <Tag>JavaScript</Tag>
-            <Tag>vue</Tag>
+            <Tag type="success">JavaScript</Tag>
+            <Tag type="success">vue</Tag>
           </div>
         </footer>
       </div>

@@ -48,11 +48,8 @@ export default defineComponent({
   border-radius: 8px;
 }
 .be-tag--success {
-  background-color: #f0f9eb;
-  border-color: #e1f3d8;
-  color: #67c23a;
-  &:hover {
-    color: #67c23a;
-  }
+  background-color: #649684;
+  border-color: #649684;
+ 
 }
 </style>
