@@ -125,11 +125,8 @@ instance.interceptors.response.use((response) => {
  * @param {String} url [请求的url地址]
  * @param {Object} params [请求时携带的参数]
  */
- let http = {
-   get:{},
-   post:{}
- }
-http.get = function(url:'string', params:null|object = null) {
+
+const get = function(url:'string', params:null|object = null) {
   // const obj = { params, t: new Date().getTime().toString() }
   return new Promise((resolve, reject) => {
     instance
@@ -149,7 +146,7 @@ http.get = function(url:'string', params:null|object = null) {
  * @param {Object} params [请求时携带的参数]
  */
 
-http.post = function(url:string, params:object) {
+const post = function(url:string, params:object) {
   return new Promise((resolve, reject) => {
     instance
       .post(
@@ -166,5 +163,8 @@ http.post = function(url:string, params:object) {
   })
 }
 
+const http = {
+  post,
+  get
+}
 export default http
-

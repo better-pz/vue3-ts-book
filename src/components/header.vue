@@ -37,6 +37,7 @@ header {
   background-color: rgba(35, 35, 36, 0.8);
   border-bottom: 1px solid rgba(35, 35, 36, 0.8);
   z-index: 10;
+  
   .header-min {
     width: 1100px;
     margin: 0 auto;

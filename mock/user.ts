@@ -2,14 +2,15 @@
 export default [
     // GetUserInfo
     {
-      url: '/upms/user/info',
+      url: '/user/info',
       type: 'get',
       response: () => {
         return {
           code: 200,
           message: '成功',
           data: {
-            name: 'testName',
+            name: '柏特_Better',
+            
           },
         };
       },
